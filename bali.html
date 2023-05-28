@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bali</title>
+    <link rel="stylesheet" href="style.css">
+    </style>
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;<ul>
+            <li><a href = "home3.html" class = "active"> Home </a></li>
+            <li><a href = "about.html"> About </a></li>  
+            <li><a href = "discover.html"> Discover </a></li>
+            <li><a href = "exp.html"> Experience </a></li> 
+        </ul>
+    </header>
+<div class="bali" >
+    <p><h1 align="center"><u><i><b>BALI</b></i></u></h1>Bali is a province of Indonesia and the westernmost of the
+         Lesser Sunda Islands. East of Java and west of Lombok, the province 
+         includes the island of Bali and a few smaller neighbouring islands,
+         notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan to the southeast.<br>
+         A tropical haven for beach bums, wellness worshipers, and the culturally curious
+        No island has enchanted travelers quite like Bali. Less than half the size of Hawaii’s
+         big island, Bali manages to pack countless adventures into one small package.<br> Dazzling 
+        beaches beckon the sun seekers and surfers along the island’s southwest coast, while ancient
+         temples and a thriving wellness scene draw travelers inland to Ubud. It’s the kind of place where hedonists,
+          relaxation-seekers, and ecotourists can all find something to enjoy, from wild nightclubs in
+          Seminyak and Kuta to luxury clifftop hotels in Nusa Dua to the pristine jungles and volcanic landscapes of the island’s north.</p>
+          <br><h3><u>Famous places to visit:</u><br>
+</h3>
+<ul>
+    <li><b>Waterbom Bali</b>-avg. admission ticket for Rs.2604/-</li>
+    <li><b>Sacred Monkey Sanctuary</b>-avg. admission ticket for Rs.300/-</li>
+    <li><b>Telalang Rice terrace</b>-avg. admission ticket for Rs.150/-</li>
+    <li><b>Tanah Lot Temple</b>-avg. admission ticket for Rs.350/-</li>
+</ul><br>
+<br>
+
+
+<!--Slider-->
+<div class="slideshow-container">
+
+    <!-- Images -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="bali1.jpg" style="width:100%">
+      <div class="text">Waterbom Bali</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="mon.jpg" style="width:100%">
+      <div class="text">Sacred Monkey Sanctuary</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://tse3.mm.bing.net/th?id=OIP.so3QgZCrCl2jAMTkHVi2CwHaFj&pid=Api&P=0" style="width:100%">
+      <div class="text">Telalang Rice terrace</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="lot.jpg" style="width:100%">
+        <div class="text">Tanah Lot Temple</div>
+      </div>
+  
+    <!-- Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;<!-- Unicode for buttons --></a>
+    <a class="next" onclick="plusSlides(1)">&#10095;<!-- Unicode for buttons --></a>
+  </div>
+  <br>
+  
+  <!-- DOTS -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+<br>
+</div>
+<p class="footer">
+    Thanks for visiting<br>
+    SAFARNAMA<br>
+    CopyRight &copy;Abhinav Sharma,Amala Shrivastava,Aman Tomar,Bhavika Santosh<br>
+    2023
+</p>
+
+</body>
+<!--
+    Reason for script in end
+    (if i put it in head)slides[] is undefined if I try to access before it exists on the DOM 
+    -> causing first image to not display initially
+-->
+<script>
+
+    //to show first image
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>

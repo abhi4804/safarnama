@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="svg+xml">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;<ul>
+            <li><a href = "home3.html" class = "active"> Home </a></li>
+            <li><a href = "about.html"> About </a></li>  
+            <li><a href = "discover.html"> Discover </a></li>
+            <li><a href = "exp.html"> Experience </a></li> 
+        </ul>
+    </header>
+<div class="thai">
+    <p><h1 align="center"><u><i><b>THAILAND</b></i></u></h1>
+        Thailand, historically known as Siam and officially the Kingdom of Thailand,
+         is a country in Southeast Asia, located at the centre of the
+         Indochinese Peninsula, spanning 513,120 square kilometres, with a population of almost 70 million<br>
+         Thailand is a country of many contrasting facets, with glorious beaches as well as forests,
+        jungles and mountains. Whether you want to swim, sunbathe or explore the wildlife, a family
+        holiday in Thailand will never be dull.<br>
+        If you're looking for seaside relaxation, visit the beaches and bay of Hat Karon<br>
+         in Phuket with sand dunes and palm trees. The island of Ko Tao has coral reefs and is the place
+        to go if you want to learn to dive, but you can also go mountain biking or just sunbathe on the beach.<br>
+        The Royal Barge National Museum in Bangkok houses several barges built for Thailand's kings; the
+        beautifully detailed carving is quite breathtaking. Doi Suthep-Doi Pui National Park in Chiang Mai<br>
+         has a wealth of flowering plants and ferns as well as three hundred species of birds.<br> If you're in the
+         mood for a quiet spot, try the town of Sangkhlaburi; from there you can set off on an elephant 
+        trek or jungle tour. For mountains and forests, visit the north-western province of Mai Hong Son.<br></p>
+        <br><h3><u>Famous places to visit:</u></h3><br>
+        <ul>
+            <li><b>Phi Phi island</b>-avg. admission ticket for Rs.6,400/-</li>
+            <li><b>Chiang Mai</b>-avg.admission ticket for RS.4080/-</li>
+            <li><b>Kanchanaburi</b>-avg. admission ticket for Rs.3825/-</li>
+            <li><b>Koh Tao</b>-avg. admission ticket for Rs.3060/-</li>
+        </ul><br><br>
+<!--Slider-->
+<div class="slideshow-container">
+
+    <!-- Images -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="phi.jpg" style="width:100%">
+      <div class="text">Phi phi island</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="mai.jpg" style="width:100%">
+      <div class="text">chiang mai </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="kanc.jpg" style="width:100%">
+      <div class="text">Kanchanaburi</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="tao.jpg" style="width:100%">
+        <div class="text">Koh Tao</div>
+      </div>
+  
+    <!-- Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;<!-- Unicode for buttons --></a>
+    <a class="next" onclick="plusSlides(1)">&#10095;<!-- Unicode for buttons --></a>
+  </div>
+  <br>
+</div>
+<p class="footer">
+    Thanks for visiting<br>
+    SAFARNAMA<br>
+    CopyRight &copy;Abhinav Sharma,Amala Shrivastava,Aman Tomar,Bhavika Santosh<br>
+    2023
+</p>
+
+    
+</body>
+<script>
+
+    //to show first image
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>

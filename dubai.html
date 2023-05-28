@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dubai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="svg+xml">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;<ul>
+            <li><a href = "home3.html" class = "active"> Home </a></li>
+            <li><a href = "about.html"> About </a></li>  
+            <li><a href = "discover.html"> Discover </a></li>
+            <li><a href = "exp.html"> Experience </a></li> 
+        </ul>
+    </header>
+<div class="bali">
+    <p><h1 align="center"><u><i><b>DUBAI</b></i></u></h1>Beautiful beaches, record-breaking attractions and experiences like no other – Dubai is the place to be in 2023.<br>
+         It's no wonder we've been named Tripadvisor's #1 Most Popular Destination in the World for the second year running.<br>
+         Dubai is the most populous city in the United Arab Emirates (UAE) and the capital of the Emirate of Dubai, the most populated of the 7 emirates of the United Arab Emirates.<br>
+         Established in the 18th century as a small fishing village, the city grew rapidly in the early<br>
+          21st century with a focus on tourism and luxury,having the second most five-star hotels in the world,
+          and the tallest building in the world, the Burj Khalifa, which is 828 metres (2,717 ft) tall.<br> </p>
+<br><h3><u>Famous places to visit:</u></h3><br>
+</h2>
+<ul>
+    <li><b>Visit Burj Khalifa</b>-avg. admission ticket for Rs.4000/-</li>
+    <li><b>Desert Safari</b>-avg. admission ticket for Rs.8000/-</li>
+    <li><b>Dubai Marina</b>-avg. admission ticket for Rs.7500</li>
+    <li><b>Palm Observatory</b>-avg. admission ticket for Rs.4500</li>
+</ul>
+<br>
+<br>
+
+<!--Slider-->
+<div class="slideshow-container">
+
+    <!-- Images -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="burj.jpg" style="width:100%">
+      <div class="text">Burj Khalifa</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="saf.jpg" style="width:100%">
+      <div class="text">Desert Safari</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="marina.jpg" style="width:100%">
+      <div class="text">Dubai Marina</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="palm.jpg" style="width:100%">
+        <div class="text">Palm Observatory</div>
+      </div>
+  
+    <!-- Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;<!-- Unicode for buttons --></a>
+    <a class="next" onclick="plusSlides(1)">&#10095;<!-- Unicode for buttons --></a>
+  </div>
+  <br>
+</div>
+<p class="footer">
+    Thanks for visiting<br>
+    SAFARNAMA<br>
+    CopyRight &copy;Abhinav Sharma,Amala Shrivastava,Aman Tomar,Bhavika Santosh<br>
+    2023
+</p>
+
+</body>
+<!--
+    Reason for script in end
+    (if i put it in head)slides[] is undefined if I try to access before it exists on the DOM 
+    -> causing first image to not display initially
+-->
+<script>
+
+    //to show first image
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="svg+xml">
+</head>
+<body>
+    <header>
+        &nbsp;&nbsp;<ul>
+            <li><a href = "home3.html" class = "active"> Home </a></li>
+            <li><a href = "about.html"> About </a></li>  
+            <li><a href = "discover.html"> Discover </a></li>
+            <li><a href = "exp.html"> Experience </a></li> 
+        </ul>
+    </header>
+<div class="bora">
+    <p><h1 align="center"><u><i><b>BORA-BORA</b></i></u></h1>The relatively small island of Bora Bora is an activity giant,
+         offering visitors the chance to experience a 4x4 safari,<br> sunbathe and swim at white sandy beaches,
+          dive in a natural underwater park among fish and corals, experience thrilling shark feedings,
+           or circle the turquoise lagoon by boat. And Bora Bora is a superlative romantic spot.<br>
+            Fall captive to this lush gem of a Polynesian island by sharing an intimate midnight dinner
+             on the beach;<br> visiting the Lagoonarium, the Diving Centre, the Coral Gardens or the Leopard
+              Rays Trench; or taking it all in from the lofty heights of 2,300-foot Mount Otemanu.</p>
+<br><h3><u>Famous places to visit:</u></h3><br>
+<ul>
+    <li><b>Visit a Pearl Farm</b>-avg. admission ticket for Rs.14,400/-</li>
+    <li><b>Vanilla Plantation</b>-avg.admission ticket for RS.7500/-</li>
+    <li><b>Mount Otemanu</b>-avg. admission ticket for Rs.10,000/-</li>
+    <li><b>Coral Gardens</b>-avg. admission ticket for Rs.12000/-</li>
+</ul><br>
+<br>
+
+<!--Slider-->
+<div class="slideshow-container">
+
+    <!-- Images -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="pearl.jpg" style="width:100%">
+      <div class="text">Pearl Farm</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="vanilla.jpg" style="width:100%">
+      <div class="text">Vanilla Plantation</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="mount.jpg" style="width:100%">
+      <div class="text">Mount Otemanu</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="coral.jpg" style="width:100%">
+        <div class="text">Coral Gardens</div>
+      </div>
+  
+    <!-- Buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;<!-- Unicode for buttons --></a>
+    <a class="next" onclick="plusSlides(1)">&#10095;<!-- Unicode for buttons --></a>
+  </div>
+  <br>
+  
+  <!-- DOTS -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div> 
+<br>
+</div>
+
+<p class="footer">
+    Thanks for visiting<br>
+    SAFARNAMA<br>
+    CopyRight &copy;Abhinav Sharma,Amala Shrivastava,Aman Tomar,Bhavika Santosh<br>
+    2023
+</p>
+
+    
+</body>
+<script>
+
+    //to show first image
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+</html>

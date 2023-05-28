@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding:0;
+}
+#img-head{
+    width: 100px;
+    height:100px;
+    background-color: beige;
+    border-radius: 50%;
+}
+.home {
+    float:right;
+    
+}
+
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(beachh.jpeg);
+   
+}
+
+  
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left:20px;
+    float: right;
+}    
+header ul li a{
+    text-decoration: none;
+    color:#140242;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover,header ul li a.active{
+    background-color: #ffffff;
+    color: #000000;
+}
+.aaa{
+    color: beige;
+    text-decoration: none;
+}
+.aab{
+    color: #F92C85;
+    text-decoration: none;
+}
+
+#texts{
+    color:wheat;
+    margin:300px;
+}
+.b1,.b2,.b3,.b4{
+    padding: 15px;
+}
+a{
+    color: wheat;
+}
+.main{
+   color:rgb(12, 2, 59);
+    background-image:url("fro.jpg");
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+.footer{
+    background-image: url(beachh.jpeg);
+    color:#140242;
+    margin:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:105px;
+    padding:30px;
+    text-align:center;
+
+}
+#img{
+    margin:30px;
+}
+.bbody{
+    margin-top: 100px;
+    background-color: #FDF5DF;
+    text-align: center;
+    color:#F92C85;
+}
+#te{
+    font-style: italic;
+    font-size: 150%;
+    color:rgb(12, 2, 59);
+    margin-top: 45px;
+    background-color: #FDF5DF;
+}
+
+.disc{
+    font-style: italic;
+    font-size: 100%;
+    background-color:#FDF5DF;
+    padding: 50px;
+    display:flex;
+
+}
+
+#img1{
+    margin:30px;
+    width: 470px;
+    height: 300px;
+    margin-left: 55px;
+     --b: 7px;  /* the border thickness */
+    --d: 20px; /* the distance from the edge */
+    --o: 15px; /* the offset on hover */
+    --s: 1;    /* the direction of the hover effect (+1 or -1)*/
+    
+    --_d: calc(var(--d) + var(--s)*1em);
+    --_g: calc(100% - 2*(var(--_d) + var(--b)));
+    --_m:
+      conic-gradient(from 90deg at var(--_d) var(--_d),#0000 25%,#000 0)
+       0 0/calc(100% - var(--_d)) calc(100% - var(--_d)),
+      linear-gradient(#000 0 0) 50%/var(--_g) var(--_g) no-repeat;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    font-size: 0;
+    cursor: pointer;
+    transition: .35s;
+   
+}
+#img1:hover {
+    font-size: var(--o);
+  }
+
+#img2{
+    margin:15px;
+    width:300px;
+    height:250px;
+    margin-left: 55px;
+
+}
+.bali,.thai,.bora,.dubai{
+    font-style: italic;
+   margin-top: 50px;
+    font-size: 150%;
+   color:#140242 ;
+   background-color:#FDF5DF;
+    padding: 50px;
+    
+}
+.abc{
+    background-color:#FDF5DF;
+}
+.lo{
+    justify-content: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: wheat;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color:rgb(12, 2, 59);
+        
+    }
+#img3{
+    width: 200px;
+    height: 150px;
+    float:right;
+}
+.thumbnails img{
+        height: 150px;
+        border: 4px solid #555;
+        padding: 1px;
+        margin: 0 10px 10px 0;
+}
+.thumbnails img:hover{
+        border: 4px solid #00ccff;
+}   
+
+/* Slider CSS */
+* {box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position of button*/
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*Hover on button*/
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption*/
+.text {
+    color: #fbff00;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Slider no */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    display: none;/*don't want number?*/
+}
+
+/* dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* magic */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* magic */
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
